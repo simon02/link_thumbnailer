@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in link_thumbnailer.gemspec
 gemspec
 
+gem 'video_info', github: 'thibaudgg/video_info', branch: :master
+
 group :development, :test do
   gem 'rspec',      '~> 2.14'
   gem 'webmock',    '~> 1.14'
