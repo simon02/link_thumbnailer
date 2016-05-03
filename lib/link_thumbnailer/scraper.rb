@@ -35,7 +35,7 @@ module LinkThumbnailer
       config.attributes.each do |name|
         scrapers.each do |scraper_prefix|
           scraper_class(scraper_prefix, name).new(document, website).call(name.to_s)
-          break unless website.send(name).blank?
+          break unless name.to_sym == :images || website.send(name).blank?
         end
       end
 

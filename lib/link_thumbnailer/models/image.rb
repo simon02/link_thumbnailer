@@ -7,10 +7,11 @@ module LinkThumbnailer
   module Models
     class Image < ::LinkThumbnailer::Model
 
-      attr_reader :src, :type, :size
+      attr_reader :src, :origin, :type, :size
 
-      def initialize(src, size = nil, type = nil)
+      def initialize(src, origin = 'default', size = nil, type = nil)
         @src  = src
+        @origin = origin
         @size = size || parser.size
         @type = type || parser.type
       end

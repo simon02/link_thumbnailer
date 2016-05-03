@@ -65,7 +65,7 @@ module LinkThumbnailer
         end
 
         def modelize(uri, size = nil, type = nil)
-          model_class.new(uri, size, type)
+          model_class.new(uri, 'default', size, type)
         end
 
       end

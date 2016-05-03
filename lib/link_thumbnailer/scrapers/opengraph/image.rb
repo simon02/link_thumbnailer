@@ -24,7 +24,7 @@ module LinkThumbnailer
           end
 
           def modelize(node, text = nil)
-            model_class.new(text, size)
+            model_class.new(text, 'og', size)
           end
 
           def model_class
