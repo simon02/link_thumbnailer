@@ -16,6 +16,7 @@ module LinkThumbnailer
       blacklist_urls.each do |url|
         return false if image.src && image.src.to_s[url]
       end
+      return false if image.size == [1,1]
 
       true
     end
